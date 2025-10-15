@@ -1,10 +1,17 @@
-app/page.jsx
-export default function Home() {
+// app/layout.jsx
+import './globals.css';
+
+export const metadata = {
+  title: 'Semih Tech Bilgisayar',
+  description: 'Yeni ve ikinci el bilgisayar satış sitesi',
+};
+
+export default function RootLayout({ children }) {
   return (
-    <div style={{ textAlign: 'center', padding: '100px 20px' }}>
-      <h1 style={{ fontSize: '40px', fontWeight: 'bold' }}>Semih Tech Bilgisayar</h1>
-      <p style={{ marginTop: '10px', color: '#bbb' }}>Yeni, ikinci el ve özel toplama bilgisayarlar.</p>
-      <p style={{ marginTop: '30px' }}>Site başarıyla çalışıyor ✅</p>
-    </div>
+    <html lang="tr">
+      <body style={{ margin: 0, background: '#111', color: '#fff', fontFamily: 'system-ui, sans-serif' }}>
+        {children}
+      </body>
+    </html>
   );
 }
